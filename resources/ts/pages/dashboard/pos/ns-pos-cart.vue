@@ -414,8 +414,11 @@ export default {
             orderSubscribe: null,
             productSubscribe: null,
             settingsSubscribe: null,
+<<<<<<< HEAD
             activePlateSubscribe: null,
             activePlate: '',
+=======
+>>>>>>> c3e7c4f (Revert "Update")
             settings: {},
             types: [],
             order: {},
@@ -445,10 +448,13 @@ export default {
             this.$forceUpdate();
         });
 
+<<<<<<< HEAD
         this.activePlateSubscribe   =   POS.activePlate.subscribe( activePlate => {
             this.activePlate    =   activePlate;
         })
 
+=======
+>>>>>>> c3e7c4f (Revert "Update")
         this.settingsSubscribe  =   POS.settings.subscribe( settings => {
             this.settings   =   settings;
         });
@@ -463,12 +469,16 @@ export default {
         this.orderSubscribe.unsubscribe();
         this.productSubscribe.unsubscribe();
         this.settingsSubscribe.unsubscribe();
+<<<<<<< HEAD
         this.activePlateSubscribe.unsubscribe();
+=======
+>>>>>>> c3e7c4f (Revert "Update")
     },
     methods: {
         __,
         switchTo,
 
+<<<<<<< HEAD
         setActivePlate( plate ) {
             if ( plate === POS.activePlate.getValue() ) {
                 POS.activePlate.next( '' );
@@ -477,6 +487,8 @@ export default {
             }
         },
 
+=======
+>>>>>>> c3e7c4f (Revert "Update")
         async changeProductPrice( product ) {
             if ( this.settings.unit_price_editable ) {
                 try {
