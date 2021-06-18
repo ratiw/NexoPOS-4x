@@ -15,12 +15,12 @@ class CashRegistersService
     public function openRegister( Register $register, $amount, $description )
     {
         if ( $register->status !== Register::STATUS_CLOSED ) {
-            throw new NotAllowedException( 
-                sprintf( 
-                    __( 'Unable to open "%s" *, as it\'s not closed.' ),
-                    $register->name
-                )
-            );
+            // throw new NotAllowedException( 
+            //     sprintf( 
+            //         __( 'Unable to open "%s" *, as it\'s not closed.' ),
+            //         $register->name
+            //     )
+            // );
         }
 
         $registerHistory            =   new RegisterHistory;
