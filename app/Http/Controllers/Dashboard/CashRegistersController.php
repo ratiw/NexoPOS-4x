@@ -48,9 +48,9 @@ class CashRegistersController extends DashboardController
 
     public function editRegister( Register $register )
     {
-        if ( $register->status === Register::STATUS_OPENED ) {
-            throw new NotAllowedException( __( 'Unable to edit a register that is currently in use' ) );
-        }
+        // if ( $register->status === Register::STATUS_OPENED ) {
+        //     throw new NotAllowedException( __( 'Unable to edit a register that is currently in use' ) );
+        // }
 
         return RegisterCrud::form( $register );
     }
