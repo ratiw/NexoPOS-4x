@@ -36,17 +36,17 @@
                             </div>
                             <div>
                                 <button @click="setActivePlate( 'plate_1' )" :class="activePlate === 'plate_1' ? 'bg-blue-400 text-white' : 'bg-gray-200 border-gray-300'" class="w-full h-10 px-3  border-r  outline-none flex items-center">
-                                    <span class="ml-1 hidden md:inline-block">1</span>
+                                    <span class="ml-1 md:inline-block">1</span>
                                 </button>
                             </div>
                             <div>
                                 <button @click="setActivePlate( 'plate_2' )" :class="activePlate === 'plate_2' ? 'bg-blue-400 text-white' : 'bg-gray-200 border-gray-300'" class="w-full h-10 px-3 bg-gray-200 border-r border-gray-300 outline-none flex items-center">
-                                    <span class="ml-1 hidden md:inline-block">2</span>
+                                    <span class="ml-1 md:inline-block">2</span>
                                 </button>
                             </div>
                             <div>
                                 <button @click="setActivePlate( 'plate_3' )" :class="activePlate === 'plate_3' ? 'bg-blue-400 text-white' : 'bg-gray-200 border-gray-300'" class="w-full h-10 px-3 bg-gray-200 border-r border-gray-300 outline-none flex items-center">
-                                    <span class="ml-1 hidden md:inline-block">3</span>
+                                    <span class="ml-1 md:inline-block">3</span>
                                 </button>
                             </div>
                             <!-- <div class="flex-auto"><button class="w-full h-10 px-3 bg-gray-200 border-r border-gray-300 outline-none flex items-center" disabled></button></div> -->
@@ -414,11 +414,8 @@ export default {
             orderSubscribe: null,
             productSubscribe: null,
             settingsSubscribe: null,
-<<<<<<< HEAD
             activePlateSubscribe: null,
             activePlate: '',
-=======
->>>>>>> c3e7c4f (Revert "Update")
             settings: {},
             types: [],
             order: {},
@@ -448,13 +445,10 @@ export default {
             this.$forceUpdate();
         });
 
-<<<<<<< HEAD
         this.activePlateSubscribe   =   POS.activePlate.subscribe( activePlate => {
             this.activePlate    =   activePlate;
         })
 
-=======
->>>>>>> c3e7c4f (Revert "Update")
         this.settingsSubscribe  =   POS.settings.subscribe( settings => {
             this.settings   =   settings;
         });
@@ -469,16 +463,12 @@ export default {
         this.orderSubscribe.unsubscribe();
         this.productSubscribe.unsubscribe();
         this.settingsSubscribe.unsubscribe();
-<<<<<<< HEAD
         this.activePlateSubscribe.unsubscribe();
-=======
->>>>>>> c3e7c4f (Revert "Update")
     },
     methods: {
         __,
         switchTo,
 
-<<<<<<< HEAD
         setActivePlate( plate ) {
             if ( plate === POS.activePlate.getValue() ) {
                 POS.activePlate.next( '' );
@@ -487,8 +477,6 @@ export default {
             }
         },
 
-=======
->>>>>>> c3e7c4f (Revert "Update")
         async changeProductPrice( product ) {
             if ( this.settings.unit_price_editable ) {
                 try {
