@@ -86,8 +86,8 @@ export default {
         },
         submit( amount ) {
             Popup.show( nsPosConfirmPopupVue, {
-                title: 'Confirm Your Action',
-                message: this.$popupParams.confirmMessage || 'Would you like to confirm your action.',
+                title: __( 'Confirm Your Action' ),
+                message: this.$popupParams.confirmMessage || __( '¿Te gustaría confirmar tu acción?.' ),
                 onAction: ( action ) => {
                     if ( action ) {
                         this.triggerSubmit();

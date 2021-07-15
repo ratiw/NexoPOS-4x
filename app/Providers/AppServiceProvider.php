@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Classes\Hook;
 use App\Events\ModulesBootedEvent;
+use App\Events\AfterAppHealthCheckedEvent;
 use App\Events\ModulesLoadedEvent;
 use App\Models\Order;
 use App\Models\Permission;
@@ -231,7 +232,7 @@ class AppServiceProvider extends ServiceProvider
          * When the module has started, 
          * we can load the configuration.
          */
-        Event::listen( function( ModulesBootedEvent $event ) {
+        Event::listen( function( AfterAppHealthCheckedEvent $event ) {
             $this->loadConfiguration();
         });
     }
@@ -266,13 +267,13 @@ class AppServiceProvider extends ServiceProvider
         config([ 'nexopos.orders.types'         =>  Hook::filter( 'ns-orders-types', [
             'takeaway'          =>  [
                 'identifier'    =>  'takeaway',
-                'label'         =>  'Take Away',
+                'label'         =>  __( 'Take Away' ),
                 'icon'          =>  '/images/groceries.png',
                 'selected'      =>  false
             ], 
             'delivery'          =>  [
                 'identifier'    =>  'delivery',
-                'label'         =>  'Delivery',
+                'label'         =>  __( 'Delivery' ),
                 'icon'          =>  '/images/delivery.png',
                 'selected'      =>  false
             ]

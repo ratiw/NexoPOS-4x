@@ -274,7 +274,7 @@
                     <table class="table w-full text-sm text-gray-700" v-if="visibleSection === 'both'">
                         <tr>
                             <td width="200" class="border border-gray-300 p-2">
-                                <a @click="selectCustomer()" class="hover:text-blue-400 cursor-pointer outline-none border-dashed py-1 border-b border-blue-400 text-sm">Customer : {{ customerName }}</a>
+                                <a @click="selectCustomer()" class="hover:text-blue-400 cursor-pointer outline-none border-dashed py-1 border-b border-blue-400 text-sm">{{__( 'Customer :' )}} {{ customerName }}</a>
                             </td>
                             <td width="200" class="border border-gray-300 p-2">{{ __( 'Sub Total' ) }}</td>
                             <td width="200" class="border border-gray-300 p-2 text-right">{{ order.subtotal | currency }}</td>

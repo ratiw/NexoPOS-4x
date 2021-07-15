@@ -26,13 +26,13 @@ const nsDateTimePicker  =   Vue.component( 'ns-date-time-picker', {
                         </div>
                     </div>
                     <div class="grid grid-flow-row grid-cols-7 grid-rows-1 gap-0 text-gray-700">
-                        <div class="border border-gray-200 h-8 flex justify-center items-center text-sm">Sun</div>
-                        <div class="border border-gray-200 h-8 flex justify-center items-center text-sm">Mon</div>
-                        <div class="border border-gray-200 h-8 flex justify-center items-center text-sm">Tue</div>
-                        <div class="border border-gray-200 h-8 flex justify-center items-center text-sm">Wed</div>
-                        <div class="border border-gray-200 h-8 flex justify-center items-center text-sm">Thr</div>
-                        <div class="border border-gray-200 h-8 flex justify-center items-center text-sm">Fri</div>
-                        <div class="border border-gray-200 h-8 flex justify-center items-center text-sm">Sat</div>
+                        <div class="border border-gray-200 h-8 flex justify-center items-center text-sm">{{ __( 'Sun' ) }}</div>
+                        <div class="border border-gray-200 h-8 flex justify-center items-center text-sm">{{ __( 'Mon' ) }}</div>
+                        <div class="border border-gray-200 h-8 flex justify-center items-center text-sm">{{ __( 'Tue' ) }}</div>
+                        <div class="border border-gray-200 h-8 flex justify-center items-center text-sm">{{ __( 'Wed' ) }}</div>
+                        <div class="border border-gray-200 h-8 flex justify-center items-center text-sm">{{ __( 'Thr' ) }}</div>
+                        <div class="border border-gray-200 h-8 flex justify-center items-center text-sm">{{ __( 'Fri' ) }}</div>
+                        <div class="border border-gray-200 h-8 flex justify-center items-center text-sm">{{ __( 'Sat' ) }}</div>
                     </div>
                     <div v-for="(week, index) of calendar" :key="index" class="grid grid-flow-row grid-cols-7 grid-rows-1 gap-0 text-gray-700">
                         <div :key="_index" v-for="( dayOfWeek, _index) in daysOfWeek" class="h-8 flex justify-center items-center text-sm">
